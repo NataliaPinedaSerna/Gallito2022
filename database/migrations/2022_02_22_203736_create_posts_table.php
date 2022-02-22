@@ -17,6 +17,7 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->text('content');
             $table->foreignId('user_id')->references('id')->on('users');
+            $table->integer('likes')->default(0);
             $table->timestamps();
         });
     }
