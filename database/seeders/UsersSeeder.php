@@ -24,21 +24,27 @@ class UsersSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'name' => "Don Asistente",
-            'email' => "asistente@autonoma.edu.co",
-            'password' => Hash::make('wola1234'),
+            'name' => "Laura Carolina Candamil Cortés",
+            'email' => "laurac.candamilc@autonoma.edu.co",
+            'password' => Hash::make('hola2345'),
         ]);
 
         DB::table('users')->insert([
-            'name' => "Diseñadora",
-            'email' => "diseno@autonoma.edu.co",
-            'password' => Hash::make('lola1234'),
+            'name' => "Jaime Alonso Parra Lozada",
+            'email' => "jaimea.parral@autonoma.edu.co",
+            'password' => Hash::make('hola3456'),
         ]);
 
         DB::table('users')->insert([
+            'name' => "Santiago Quintero Rodríguez",
+            'email' => "santiago.quinteror@autonoma.edu.co",
+            'password' => Hash::make('hola4567'),
+        ]);
+
+        /* DB::table('users')->insert([
             'name' => Str::random(10),
             'email' => Str::random(10).'@gmail.com',
             'password' => Hash::make('password'),
-        ]);
+        ]); */
     }
 }
