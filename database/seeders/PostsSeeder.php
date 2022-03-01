@@ -5,7 +5,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
+//use Illuminate\Support\Str;
+use App\Models\Post;
 
 class PostsSeeder extends Seeder
 {
@@ -16,37 +17,45 @@ class PostsSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('posts')->insert([
-            'content' => "Contenido del Post 1" ,
-            'user_id' => 1 ,
-        ]);
+        $p = new Post();
+        $p->content = "Contenido del Post 1";
+        $p->user_id = 1;
+        $p->save();
 
-        DB::table('posts')->insert([
-            'content' => "Contenido del Post 2" ,
-            'user_id' => 1 ,
-            'likes' => 45 ,
-        ]);
+        $p = new Post();
+        $p->content = "Contenido del Post 2";
+        $p->user_id = 1;
+        $p->likes = 45;
+        $p->save();
 
-        DB::table('posts')->insert([
-            'content' => "Contenido del Post 3" ,
-            'user_id' => 1 ,
-        ]);
+        $p = new Post();
+        $p->content = "Contenido del Post 3";
+        $p->user_id = 1;
+        $p->save();
 
-        DB::table('posts')->insert([
-            'content' => "Contenido del Post 4" ,
-            'user_id' => 2 ,
-            'likes' => 30 ,
-        ]);
+        $p = new Post();
+        $p->content = "Contenido del Post 4";
+        $p->user_id = 2;
+        $p->likes = 30;
+        $p->save();
 
-        DB::table('posts')->insert([
-            'content' => "Contenido del Post 5" ,
-            'user_id' => 2 ,
-        ]);
+        $p = new Post();
+        $p->content = "Contenido del Post 5";
+        $p->user_id = 2;
+        $p->save();
 
-        DB::table('posts')->insert([
-            'content' => "Contenido del Post 6" ,
-            'user_id' => 3 ,
-            'likes' => 15 ,
-        ]);
+        $p = new Post();
+        $p->content = "Contenido del Post 6";
+        $p->user_id = 3;
+        $p->likes = 15;
+        $p->save();
+
+        /* 
+        $p = new Post();
+        $p->content = "";
+        $p->user_id = ;
+        $p->save(); 
+        */
+        
     }
 }
