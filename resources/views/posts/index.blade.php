@@ -11,16 +11,23 @@
             <div class="card mb-3">
                 <div class="card-body">
                 <h5 class="card-title"> {{ $user->name }} </h5>
-                <h6 class="card-subtitle mb-2 text-muted"> {{ $post->created_at->format('d-m-Y') }}</h6>
-                <h6 class="card-subtitle mb-2 text-muted"> {{ $post->created_at->diffForHumans() }} </h6>
+                <div class="row">
+                    <div class="col s6" >
+                        <h6 class="card-subtitle mb-2 text-muted"> {{ $post->created_at->format('d-m-Y') }}</h6>
+                    </div>
+                    <div class="col s6" style='text-align:right'>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ $post->created_at->diffForHumans() }} </h6>
+                    </div>
+                </div>
+
                 <p class="card-text"> {{ $post->content }} </p>
                 </div>
             </div>
 
         @empty
-        <div class="alert alert.info" role="alert">
-            El usuario no ha publicado aún
-        </div>
+            <div class="alert alert-info" role="alert">
+                El usuario no ha publicado aún.
+            </div>
         @endforelse
 
     </div>

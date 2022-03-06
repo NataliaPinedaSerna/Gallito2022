@@ -4,8 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-use Illuminate\Support\Facades\DB;
-//use Illuminate\Support\Str;
+// use Illuminate\Support\Facades\DB;
 use App\Models\Post;
 
 class PostsSeeder extends Seeder
@@ -50,12 +49,21 @@ class PostsSeeder extends Seeder
         $p->likes = 15;
         $p->save();
 
-        /* 
+        /*
         $p = new Post();
-        $p->content = "";
-        $p->user_id = ;
-        $p->save(); 
+        $p->content = "Contenido";
+        $p->user_id = 0;
+        $p->save();
         */
-        
+
+        /*
+        DB::table('posts')->insert([
+            'content' => "Contenido" ,
+            'user_id' => "0" ,
+            'created_at' => now() ,
+            'updated_at' => now()
+        ]);
+        */
+
     }
 }
