@@ -20,6 +20,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/ver/posts/{user}' , [App\Http\Controllers\PostController::class , 'index']);
+Route::get( '/home' , [App\Http\Controllers\HomeController::class , 'index'] )->name('home');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/user/{user}' , [App\Http\Controllers\PostController::class , 'index']);
+
+Route::resource('posts', App\Http\Controllers\PostController::class)->except(['index']);
