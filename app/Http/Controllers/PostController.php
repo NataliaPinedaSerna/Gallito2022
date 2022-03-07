@@ -17,7 +17,7 @@ class PostController extends Controller
     {
         $posts = $user->posts()
                         ->orderBy('created_at' , 'desc')
-                        ->get();
+                        ->simplePaginate(2);
 
         /*
         $posts = Post::where('user_id' , $user->id)
